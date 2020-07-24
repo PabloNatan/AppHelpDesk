@@ -18,16 +18,19 @@
 		</header>
 
 		<main>
-			<section class="caixa-input">
+			<section class="caixa-input home">
 					
-				<div class="head-login">Login</div>
-				<form>
+				<div class="head-login"><span class="text-menu-home">Menu</span></div>
 
-					<input class='input' type="email" name="email" placeholder="E-mail">
-					<input class='input' type="password" name="password" placeholder="Senha">
+				<div class="menus">
+					<div class="menu-iten">
+						<img src="img/formulario_abrir_chamado.png" width="100%">
+					</div>
 
-					<button class="btn-enviar">Entrar</button>
-				</form>
+					<div class="menu-iten">
+						<img src="img/formulario_consultar_chamado.png" width="100%">
+					</div>
+				</div>
 				
 			</section>
 		</main>
