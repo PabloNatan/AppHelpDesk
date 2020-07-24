@@ -1,0 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;}
+
+body {font-family: Roboto;}
+
+header {
+	background-color: #343440;
+	padding: 0.8em 0;
+	margin-bottom: 1.8em;}
+
+h1 {
+	display: inline-block;
+	background: url('../img/logo.png') no-repeat left;
+	background-size: contain;
+	padding-left: 50px;
+	
+	margin: 0 2%;
+	font-size: 1.5em;}
+
+a { text-decoration: none; }
+
+header a { color: #FFF; }
+
+/* Caixa de entrada */
+
+main {
+	text-align: center;}
+
+.caixa-input {
+	border: 1px solid #dedede;
+	display: inline-block;
+	border-radius: 8px;
+	margin: 0 auto;
+	width: 400px;}
+
+.head-login {
+	text-align: left;
+	background-color: rgba(0,0,0,.03);
+	border-radius: 8px 8px 0 0;
+	line-height: 30px;
+	font-weight: 600;
+	border-bottom: 1px solid #dedede;
+	padding: 0.5em 5.5%;
+	margin-bottom: 1.5em;}
+
+.input {
+	display: block;
+	width: 90%;
+	margin:0.8em 5%;
+	height: 40px;
+	border-radius: 8px;
+	border: 1px solid #dedede;
+	padding-left: 0.5em;}
+
+.btn-enviar {
+	background-color: #17A2B8;
+	border:0;
+	padding: 0.8em;
+	text-align: center;
+	border-radius: 8px;
+	color: #FFF;
+	margin-bottom: 1.5em;
+	width: 90%;
+	font-size: 1em;
+	font-weight: bold;}
+
+.input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);}
