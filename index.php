@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title>App Help Desk</title>
@@ -21,10 +22,17 @@
 			<section class="caixa-input">
 					
 				<div class="head-login"><span class="caixa-text-logo">Login</span></div>
-				<form>
+				<form action="http://localhost/AppHelpDesk/valida_login.php" method="post">
 
 					<input class='input' type="email" name="email" placeholder="E-mail">
 					<input class='input' type="password" name="password" placeholder="Senha">
+
+					<?php if(isset($_GET['login']) && $_GET['login'] == 'erro'){ ?>
+
+							<p class="login">Usuário ou senha inválido(s)</p>
+						
+						
+					<?php } ?>
 
 					<button class=" btn btn-enviar">Entrar</button>
 				</form>
