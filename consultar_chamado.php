@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 
-<?php require_once 'validador_acesso.php'?>
+<?php require_once 'validador_acesso.php';
+
+
+	//chamados 
+	$chamados = array();
+	//abrir o arquivo.hd
+	$arquivo = fopen('arquivo.hd', 'r');
+
+	//enquanto houver registros (linhas) a serem recuperados
+	while(!feof($arquivo)) { //testa pelo fim do arquivo
+		$registro = fgets($arquivo);
+		$chamados[] = $registro;
+	}
+	fclose($arquivo);
+?>
 
 <html>
 	<head>
@@ -13,11 +27,13 @@
 
 	<body>
 		<header>
-			<a href="#">
+			<a href="home.php">
 				<h1>
 					App Help Desk
 				</h1>
 			</a>
+
+			<a href="logoff.php" class="text-destaque">SAIR</a>
 		</header>
 
 		<main>
@@ -29,21 +45,28 @@
 				<div class="center">
 				<div class="chamados">
 
+				<?php foreach ($chamados as $value) { 
+					if ($value == false){
+						break;
+					}
+					$value = explode('#', $value);
+
+
+				?>
+
 					<div class="iten-chamado">
-						<h2>Título do chamado...</h2>
-						<h3>Categoria</h3>
-						<p>Descrição do chamado...</p>
+						<h2><?= $value[0] ?></h2>
+						<h3><?= $value[1] ?></h3>
+						<p><?= $value[2] ?></p>
 					</div>	
-	
-					<div class="iten-chamado">
-						<h2>Título do chamado...</h2>
-						<h3>Categoria</h3>
-						<p>Descrição do chamado...</p>
-					</div>
+
+				<?php }  ?>
+
 						
 				</div>
 				
-				<button class="btn btn-voltar-chamado btn-chamados">Voltar</button>
+				<a href="home.php" class="btn btn-voltar-chamado btn-chamados" style="display: block;">Voltar</a>
+
 				</div>
 			</section>
 			

@@ -17,6 +17,8 @@
 					App Help Desk
 				</h1>
 			</a>
+
+			<a href="logoff.php" class="text-destaque">SAIR</a>
 		</header>
 
 		<main>
@@ -26,11 +28,17 @@
 
 				<div class="menus">
 					<div class="menu-iten">
-						<img src="img/formulario_abrir_chamado.png" width="100%">
+						<a href="abrir_chamado.php">
+							<img src="img/formulario_abrir_chamado.png" width="100%">
+						</a>
 					</div>
 
 					<div class="menu-iten">
-						<img src="img/formulario_consultar_chamado.png" width="100%">
+						<a href="consultar_chamado.php">
+							
+							<img src="img/formulario_consultar_chamado.png" width="100%">
+						</a>
+						
 					</div>
 				</div>
 				

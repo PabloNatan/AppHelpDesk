@@ -11,17 +11,20 @@
 
 	<body>
 		<header>
-			<a href="#">
+			<a href="home.php">
 				<h1>
 					App Help Desk
 				</h1>
 			</a>
+
+			
 		</header>
 
 		<main>
 			<section class="caixa-input">
 					
 				<div class="head-login"><span class="caixa-text-logo">Login</span></div>
+
 				<form action="http://localhost/AppHelpDesk/valida_login.php" method="post">
 
 					<input class='input' type="email" name="email" placeholder="E-mail">

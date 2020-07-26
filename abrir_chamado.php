@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 
-<?php require_once 'validador_acesso.php'?>
+<?php require_once 'validador_acesso.php'
+		
+?>
 
 <html>
 	<head>
@@ -14,11 +16,13 @@
 
 	<body>
 		<header>
-			<a href="#">
+			<a href="home.php">
 				<h1>
 					App Help Desk
 				</h1>
 			</a>
+
+			<a href="logoff.php" class="text-destaque">SAIR</a>
 		</header>
 
 		<main>
@@ -28,12 +32,12 @@
 				<div class="head-login"><span class="text-menu-chamado">Abertura de chamado</span></div>
 
 					
-				<form>
+				<form method="POST" action="registra_chamado.php" id='form'>
 					<label for="titulo">Título</label>
 					<input class='input' type="text" name="titulo" placeholder="Título">
 
-					<label >Categoria</label>
-					<select class="input place">
+					<label  for="categoria">Categoria</label>
+					<select class="input place" name="categoria" id="categoria">
 						<option>Criação Usuário</option>
 						<option>Impressora</option>
 						<option>Hardware</option>
@@ -42,16 +46,19 @@
 					</select>
 
 					<label for="descricao">Descrição</label>
-					<textarea id="descricao" placeholder="Digite aqui.." class="input"></textarea>
+					<textarea id="descricao" placeholder="Digite aqui.." class="input" name="descricao"></textarea>
 
 					<div class="flex-buttons">
-						<button class="btn btn-voltar-chamado">Voltar</button>
-						<button class="btn btn-entrar-chamado">Entrar</button>
+						<a href="home.php" class="btn btn-voltar-chamado">Voltar</a>
+						<button class="btn btn-entrar-chamado" id='suc'>Entrar</button>
 					</div>
 						
 				</form>
 				
-			</section>	
+				
+			</section>
+
 		</main>
 	</body>
+	<script src="js/app.js"></script>
 </html>

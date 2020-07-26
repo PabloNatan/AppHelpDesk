@@ -10,6 +10,14 @@ header {
 	padding: 0.8em 0;
 	margin-bottom: 1.8em;}
 
+.text-destaque {
+	margin-right: 2%;
+	font-size: 1.2em;
+	float: right;
+	font-weight: bolder;
+	color: #A9A9A9;
+}
+
 h1 {
 	display: inline-block;
 	background: url('../img/logo.png') no-repeat left;
@@ -169,3 +177,24 @@ h3 {
 	color: tomato;
 	text-transform: uppercase;
 	font-weight: bold;}
+
+.modal {
+	width: 40%;
+	height: 300px;
+	position: absolute;
+	left: 30%;
+	top: 30%; 	
+	border: 1px solid red;
+	background-color: #efefef;
+}
+
+.fade {
+	display: none;
+}
+
+.btn-modal {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	padding: 0.6em 3em;
+}
