@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<?php require_once 'validador_acesso.php'?>
 <html>
 	<head>
 		<title>App Help Desk</title>

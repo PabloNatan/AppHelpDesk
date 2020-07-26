@@ -29,7 +29,14 @@
 
 					<?php if(isset($_GET['login']) && $_GET['login'] == 'erro'){ ?>
 
-							<p class="login">Usuário ou senha inválido(s)</p>
+						<p class="login">Usuário ou senha inválido(s)</p>
+						
+						
+					<?php } ?>				
+
+					<?php if(isset($_GET['login']) && $_GET['login'] == 'erro2'){ ?>
+
+						<p class="login">Favor faça login para poder acessar a página</p>
 						
 						
 					<?php } ?>
