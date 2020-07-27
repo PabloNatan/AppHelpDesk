@@ -46,6 +46,14 @@
 				<div class="chamados">
 
 				<?php foreach ($chamados as $value) { 
+
+					if ($_SESSION['perfil_id'] == 2){
+						//só vamos exibir o chamado, se ele foi criado pelo usuário
+						if ($_SESSION['idUsuario'] != $value[0]) {
+							continue;
+						}
+					}
+
 					if ($value == false){
 						break;
 					}
@@ -55,9 +63,9 @@
 				?>
 
 					<div class="iten-chamado">
-						<h2><?= $value[0] ?></h2>
-						<h3><?= $value[1] ?></h3>
-						<p><?= $value[2] ?></p>
+						<h2><?= $value[1] ?></h2>
+						<h3><?= $value[2] ?></h3>
+						<p><?= $value[3] ?></p>
 					</div>	
 
 				<?php }  ?>

@@ -14,7 +14,7 @@
 		$categoria = str_replace('#', '-', $_POST['categoria']);
 		$descricao = str_replace('#', '-', $_POST['descricao']);
 
-		$texto = $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
+		$texto = $_SESSION['idUsuario'] . '#' . $titulo . '#' . $categoria . '#' . $descricao . PHP_EOL;
 
 		echo "$texto" . '<br />';
 
