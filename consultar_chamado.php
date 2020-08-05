@@ -6,15 +6,29 @@
 	//chamados 
 	$chamados = array();
 	//abrir o arquivo.hd
-	$arquivo = fopen('arquivo.hd', 'r');
+	$arquivo = fopen('../../AppHelpDesk/arquivo.hd', 'r');
 
 	//enquanto houver registros (linhas) a serem recuperados
 	while(!feof($arquivo)) { //testa pelo fim do arquivo
-		$registro = fgets($arquivo);
-		$chamados[] = $registro;
+
+			$registro = fgets($arquivo);
+
+
+		if ($_SESSION['perfil_id'] == 2){
+			//só vamos exibir o chamado, se ele foi criado pelo usuário
+
+			if ($_SESSION['idUsuario'] != substr($registro, 0, 1)) {;
+				continue;
+			}
+		}
+			
+			$chamados[] = $registro;
 	}
 	fclose($arquivo);
+	
 ?>
+
+
 
 <html>
 	<head>
@@ -47,16 +61,10 @@
 
 				<?php foreach ($chamados as $value) { 
 
-					if ($_SESSION['perfil_id'] == 2){
-						//só vamos exibir o chamado, se ele foi criado pelo usuário
-						if ($_SESSION['idUsuario'] != $value[0]) {
-							continue;
-						}
-					}
-
 					if ($value == false){
 						break;
-					}
+					}		
+
 					$value = explode('#', $value);
 
 

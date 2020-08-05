@@ -5,18 +5,12 @@
 
 body {font-family: Roboto;}
 
+
+/* Cabeçalho da Página */
 header {
 	background-color: #343440;
 	padding: 0.8em 0;
 	margin-bottom: 1.8em;}
-
-.text-destaque {
-	margin-right: 2%;
-	font-size: 1.2em;
-	float: right;
-	font-weight: bolder;
-	color: #A9A9A9;
-}
 
 h1 {
 	display: inline-block;
@@ -30,13 +24,20 @@ a { text-decoration: none; }
 
 header a { color: #FFF; }
 
+.text-destaque {
+	margin-right: 2%;
+	font-size: 1.2em;
+	float: right;
+	font-weight: bolder;
+	color: #A9A9A9;}
+
 form {
 	width: 95%;
 	margin: 0 auto;
 	text-align: left;}
 
-/* Caixa de entrada */
 
+/* Caixa de entrada */
 main {
 	text-align: center;}
 
@@ -49,7 +50,6 @@ main {
 
 .home, .chamado {
 	width:80%;}
-
 
 .head-login {
 	text-align: left;
@@ -72,7 +72,6 @@ main {
 .caixa-text-logo {
 	padding: 0.8em 5.5%;}
 
-
 .input {
 	display: block;
 	width: 100%;
@@ -83,9 +82,9 @@ main {
 	margin-bottom: 1.5em;
 	margin-top: 0.5em;
 	font-size: 1.1em;}
+
 label {
-	font-size: 1.3em;
-}
+	font-size: 1.3em;}
 
 #descricao {
 	padding-top: 0.5em;
@@ -94,42 +93,6 @@ label {
 
 .place {
 	color: rgba(0,0,0,0.6);}
-
-
-.btn {
-	text-transform: uppercase;
-	border:0;
-	padding: 0.8em;
-	text-align: center;
-	border-radius: 8px;
-	color: #FFF;
-	font-size: 1em;
-	font-weight: bold;}
-
-.btn-enviar {
-	background-color: #17A2B8;
-	width: 90%;
-	margin: 0 5% 2em 5%;
-}
-
-.btn-voltar-chamado {
-	width:49%;
-	background-color: tomato;
-}
-
-.btn-entrar-chamado {
-	width:49%;
-	background-color: #17A2B8;
-}
-
-.btn-chamados {
-	margin-left: 5%;
-	margin-bottom: 2em;}
-
-.flex-buttons {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 2em; }
 
 .input:focus {
     color: #495057;
@@ -144,32 +107,14 @@ label {
  	margin-bottom: 2em;}
 
  .menu-iten {
- 	width: 100px;
- }
-
- .chamados {
- 	display: flex;
- 	flex-direction: column;
- 	align-items: center;
- }
-
-.iten-chamado {
-	border-radius: 8px;
-	border: 1px solid #dedede;
-	background-color: rgba(0,0,0,0.03);
-	text-align: left;
-	width: 90%;
-	margin-bottom: 1em;
-	padding: 1em;
-}
+ 	width: 100px; }
 
 .center {
 	text-align: left;}
 
 h3 {
 	color: #A9A9A9;
-	margin: 0.3em 0;
-}
+	margin: 0.3em 0;}
 
 .login {
 	margin-left: 5.3%;
@@ -185,16 +130,63 @@ h3 {
 	left: 30%;
 	top: 30%; 	
 	border: 1px solid red;
-	background-color: #efefef;
-}
+	background-color: #efefef;}
 
 .fade {
-	display: none;
-}
+	display: none;}
+
+/* Butões das páginas */
+.btn {
+	text-transform: uppercase;
+	border:0;
+	padding: 0.8em;
+	text-align: center;
+	border-radius: 8px;
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bold;}
+
+.btn-enviar {
+	background-color: #17A2B8;
+	width: 90%;
+	margin: 0 5% 2em 5%;}
+
+.btn-voltar-chamado {
+	width:49%;
+	background-color: tomato;}
+
+.btn-entrar-chamado {
+	width:49%;
+	background-color: #17A2B8;}
+
+.btn-chamados {
+	margin-left: 5%;
+	margin-bottom: 2em;}
+
+.flex-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2em; }
+
 
 .btn-modal {
 	position: absolute;
 	bottom: 1em;
 	right: 1em;
-	padding: 0.6em 3em;
-}
+	padding: 0.6em 3em;}
+
+
+/* Página Consultar Chamados */
+ .chamados {
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;}
+
+.iten-chamado {
+	border-radius: 8px;
+	border: 1px solid #dedede;
+	background-color: rgba(0,0,0,0.03);
+	text-align: left;
+	width: 90%;
+	margin-bottom: 1em;
+	padding: 1em;}
